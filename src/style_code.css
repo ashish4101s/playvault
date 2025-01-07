@@ -1,0 +1,445 @@
+  /* COMMENTS */
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    overflow-y: auto;
+
+  }
+
+  /* Navigation bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: hsl(0, 0%, 91%);
+    border: 2px solid hsl(0, 0%, 88%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: nowrap;
+    height: 60px; /* Set a fixed height for the navigation bar */
+    overflow: hidden; 
+  }
+
+  /* Logo styling */
+  .logo img {
+    max-height: 195px; /* Explicit maximum height */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: -20px; /* Move the logo 20px towards the left */
+  }
+
+  /* Container for location and sign-in */
+  .navbar-right {
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
+    gap: 75px; /* Add spacing between location and sign-in buttons */
+  }
+
+  /* Location button */
+  .location-btn {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .location-btn .icon {
+    margin-right: 5px;
+  }
+
+  .location-btn:hover {
+    text-decoration: underline; /* Adds an underline on hover for better feedback */
+  }
+
+  /* Sign-in button */
+  .sign-in-btn {
+    display: flex;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 4px;
+  }
+
+  /* Responsive styles */
+
+  /* Medium devices (tablets) */
+  @media (max-width: 768px) {
+
+    body {
+    
+      height: 175vh;
+     
+  
+    }
+
+    .navbar {
+      flex-direction: row; /* Keeps everything in one row */
+      justify-content: space-between; /* Distributes space evenly */
+      height: 50px;
+    }
+
+    .logo img {
+      max-height: 150px; /* Explicit maximum height */
+      margin-left: -38px; /* Move the logo 20px towards the left */
+    }
+    
+    .navbar-right {
+      display: flex;
+      gap: 35px; /* Add spacing between location and sign-in buttons */
+    }
+
+    .location-btn {
+      font-size: 14px;
+    }
+
+    .sign-in-btn {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+
+  /* Small devices (mobile) */
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
+      flex-direction: row; /* Everything stays in a row */
+      height: 40px;
+    }
+
+    .logo img {
+      max-height: 100px; /* Explicit maximum height */
+      margin-left: -10px; /* Move the logo 20px towards the left */
+    }
+
+    .location-btn {
+      font-size: 12px;
+    }
+
+    .sign-in-btn {
+      font-size: 12px;
+      padding: 4px 10px;
+    }
+  }
+
+
+
+  
+
+
+
+
+
+  /* Popular Sports Box */    
+  .container {
+    width: 90%;
+    margin: 30px 45px 0px 45px;
+    padding: 5px 30px 0px 30px;
+    background-color: hsl(0, 0%, 91%);
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Popular Sports Header */    
+  h2 {
+    text-align: left;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  /* Popular Sports photos gallery */   
+  .sports-gallery {
+    display: flex;
+    gap: 30px;
+    padding: 15px 0px 25px 0px;  /* top-bottom, left-right */
+    user-select: none;
+    overflow-x: auto;    /*Hide the scrollbar or Enable horizontal scrolling*/
+    cursor: grab;
+    flex-wrap: nowrap;
+  }
+
+  .sports-gallery {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(0, 0, 0, 0.4) transparent; /* Thumb color, no track color */
+  }
+
+  .sport-item {
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    flex: 0 0 auto;
+    width: 150px;
+    height: 170px;
+  }
+  
+  .sport-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* .sport-item img:hover {
+    transform: scale(1.05);
+  } */
+  
+  .sport-item p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  /* Responsive styles */
+  /* For tablets and smaller devices */
+  @media (max-width: 768px) {
+    .container {
+      width: 89%; /* Slightly increased width to fit the screen better */
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 30px auto;
+    }
+
+    h2 {
+      font-size: 18px; /* Reduce header size */
+      text-align: left; /* Center-align header for better appearance */
+    }
+
+    .sports-gallery {
+      gap: 20px; /* Reduce spacing between items */
+      padding: 10px 0px;
+    }
+
+    .sport-item {
+      width: 120px; /* Reduce item size for smaller screens */
+      height: 150px;
+    }
+
+    .sport-item p {
+      font-size: 14px; /* Reduce text size */
+    }
+  }
+
+  /* For small devices (mobile) */
+  @media (max-width: 480px) {
+    .container {
+      width: 89%;
+      margin: 15px auto;
+      padding: 10px 10px; /* Further reduce padding */
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    .sports-gallery {
+      gap: 10px; /* Further reduce spacing */
+    }
+
+    .sport-item {
+      width: 100px; /* Smaller size for smaller screens */
+      height: 120px;
+    }
+
+    .sport-item p {
+      font-size: 12px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .turf_near_you_box {
+    width: 90%;
+    margin: 30px 45px 30px 45px;
+    padding: 5px 30px 0px 30px;
+    background-color: hsl(0, 0%, 91%);
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  /* Header section */
+  .turf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .turf-header h2 {
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .turf-header a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    padding: 20px 0px 0px 0px;
+  }
+
+  .turf-header a:hover {
+    text-decoration: underline;
+  }
+
+
+
+  /* Scrolling content */
+  .turf_near_you_gallery {
+    display: flex;
+    gap: 30px;
+    padding: 15px 0px 20px 0px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .turf_near_you_gallery {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(0, 0, 0, 0.4) transparent; /* Thumb color, no track color */
+  }
+  
+  /* General styling for turf cards */
+  .turf_img {
+    flex: 0 0 330px; /* Fixed width for each box of turf*/
+    background-color: hsl(0, 0%, 100%);  /* color of box of the turf*/
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    text-decoration: none; /* Remove underline for links */
+    color: inherit; /* Inherit text color */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .turf_img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+ 
+  .turf_img .turf_name_distance {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between text elements */
+    height: 30px; /* Increase overall height */
+  }
+
+  .turf_img .turf_name_distance h3 {
+    font-size: 14px;
+  }
+  
+  .turf_img .turf_name_distance h4 {
+    font-size: 10px;
+    text-align: left;
+  }
+  
+  .turf_img .turf_name_distance span {
+    font-size: 10px;
+    color: hsl(0, 0%, 41%);
+    text-align: right;
+    flex: 1; /* Allocate smaller space for distance */
+  }
+
+  /* Tablet view */
+  @media (max-width: 768px) {
+    
+    .turf_near_you_box {
+      width: 89%; 
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 30px auto;
+    }
+
+    .turf_near_you_gallery {
+      gap: 20px;
+    }
+
+    .turf_img {
+      flex: 0 0 280px;
+    }
+
+    .turf-header h2 {
+      font-size: 18px;
+    }
+
+    .turf-header a {
+      font-size: 12px;
+    }
+
+    .turf_img .turf_name_distance h3 {
+      font-size: 13px;
+    }
+
+    .turf_img .turf_name_distance h4 {
+      font-size: 9px;
+    }
+
+    .turf_img .turf_name_distance span {
+      font-size: 9px;
+    }
+  }
+
+  /* Phone view */
+  @media (max-width: 480px) {
+    .turf_near_you_box {
+      width: 89%;
+      border-radius: 10px;
+      margin: 15px auto;
+      padding: 10px 10px 3px 10px;
+    }
+
+    .turf_near_you_gallery {
+      gap: 10px;
+      padding: 15px 0px 15px 0px;
+    }
+
+    .turf_img {
+      flex: 0 0 210px;
+    }
+
+    .turf_img img {
+      height: 120px;
+    }
+
+    .turf-header h2 {
+      font-size: 16px;
+    }
+
+    .turf-header a {
+      font-size: 10px;
+    }
+
+    .turf_img .turf_name_distance h3 {
+      font-size: 12px;
+    }
+
+    .turf_img .turf_name_distance h4 {
+      font-size: 8px;
+    }
+
+    .turf_img .turf_name_distance span {
+      font-size: 8px;
+    }
+  }
+  
